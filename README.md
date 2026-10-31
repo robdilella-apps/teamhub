@@ -4,6 +4,21 @@
 
 TeamHub gives you channels, direct messages, threads, file sharing, announcements that people have to acknowledge, urgent alerts, kudos, and an admin panel. It installs on phones as a web app (PWA). You own the data and run it on [Supabase](https://supabase.com) (free tier or self-hosted Postgres).
 
+## What you need to run this
+
+**Required**
+- **A Supabase project** for the database, sign-in, file storage and realtime. Use the free cloud tier at [supabase.com](https://supabase.com), or run it locally with Docker (`npx supabase start`).
+- **A static host** for the built web app. A Netlify config (`netlify.toml`) is included, and Vercel or Cloudflare Pages work too.
+- **Node.js 20 or newer** to build it.
+
+**Optional**
+- A custom domain.
+- Your own logo and colours (`src/brand.ts` and `public/logo.svg`).
+
+**Cost:** $0 to start on the free tiers of Supabase and your host.
+
+**Just looking?** Demo mode (`npm run demo`) needs nothing but Node: no Supabase and no host. It uses sample data stored only in your browser, so it's for showing TeamHub off, not for running a real team.
+
 | Home | Channel + thread |
 |---|---|
 | ![Home](docs/screenshots/02-home-dashboard.png) | ![Channel](docs/screenshots/03-channel-with-thread.png) |
